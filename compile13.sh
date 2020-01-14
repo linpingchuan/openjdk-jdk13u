@@ -29,7 +29,8 @@ compile_openjdk13u(){
     if [ "$has_directory" = "1" ];then    
 	    chuan make CONF=linux-x86_64-server-slowdebug JOBS=1
     else
-		chuan make hotspot-only CONF=linux-x86_64-server-slowdebug JOBS=1
+		chuan make CONF=linux-x86_64-server-slowdebug JOBS=1
+		#chuan make hotspot-only CONF=linux-x86_64-server-slowdebug JOBS=1
 	fi
 	export PATH=$PATH:/home/lin/openjdk-jdk13u/build/linux-x86_64-server-slowdebug/jdk/bin/
 	echo "已经完成编译啦，快去调试吧! $date"
